@@ -1,0 +1,28 @@
+# Enable tab completion
+source ~/.git-terminal-config/git-completion.bash
+
+# Change command prompt
+source ~/.git-terminal-config/git-prompt.sh
+
+# colors!
+red="\[\033[38;5;203m\]"
+yellow="\[\033[1;33m\]"
+green="\[\033[38;05;38m\]"
+blue="\[\033[0;34m\]"
+reset="\[\033[0m\]"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# '\u' adds the name of the current user to the prompt
+# '\h' adds the hostname up to the first dot
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$red\u$yellow:\h$green\$(__git_ps1)$blue \W
+$ $reset"
+
+# Setting Aliases for convenience
+alias ..='cd ..'
+alias cl='curl -L'
+alias gitLog='git log --oneline --graph --decorate --all'
+alias now='date +"%T"'
+alias sl='ls'
