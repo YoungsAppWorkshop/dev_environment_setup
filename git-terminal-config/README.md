@@ -27,6 +27,9 @@ git config --global color.ui auto
 # displays the original state in a conflict
 git config --global merge.conflictstyle diff3
 
+# ignore unix file permissions change
+git config --global core.filemode false
+
 git config --list
 ```
 
