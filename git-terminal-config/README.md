@@ -15,20 +15,23 @@ To configure the terminal:
 Run each of the following lines on the command line to make sure everything is set up.
 
 ```
-# sets up Git with your name
+# Set up Git with your name
 git config --global user.name "<Your-Full-Name>"
 
-# sets up Git with your email
+# Set up Git with your email
 git config --global user.email "<your-email-address>"
 
-# makes sure that Git output is colored
+# Make sure that Git output is colored
 git config --global color.ui auto
 
-# displays the original state in a conflict
+# Display the original state in a conflict
 git config --global merge.conflictstyle diff3
 
-# ignore unix file permissions change
+# Ignore unix file permissions change
 git config --global core.filemode false
+
+# Set git to use the credential memory cache (or you can store)
+git config --global credential.helper cache
 
 git config --list
 ```

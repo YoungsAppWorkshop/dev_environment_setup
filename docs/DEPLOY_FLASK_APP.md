@@ -130,8 +130,10 @@ chmod -R 750 YOUR_APP_DIRECTORY/
 chmod +t YOUR_APP_DIRECTORY/
 ```
 
-* Resources
-  - [Serverfault Thread about files/folders permissions ](https://serverfault.com/questions/357108/what-permissions-should-my-website-files-folders-have-on-a-linux-webserver)
-  - [File Permissions - Sticky bit ](https://help.ubuntu.com/community/FilePermissions#Sticky_Bit)
-  - [How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts)
-  - [VirtualHost Examples](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
+* In your project directory: `git config core.filemode false`
+
+### 7. Resources
+- [Serverfault Thread about files/folders permissions ](https://serverfault.com/questions/357108/what-permissions-should-my-website-files-folders-have-on-a-linux-webserver)
+- [File Permissions - Sticky bit ](https://help.ubuntu.com/community/FilePermissions#Sticky_Bit)
+- [How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts)
+- [VirtualHost Examples](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
