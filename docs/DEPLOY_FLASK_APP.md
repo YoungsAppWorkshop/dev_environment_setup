@@ -20,7 +20,6 @@ sudo pip3 install virtualenv
 
 
 ### 3. Initialize the Project
-
 * Clone the Project Repository
   - In `/var/www/` directory: `git clone YOUR_REPOSITORY_NAME`
 
@@ -88,8 +87,7 @@ from app import app as application
         <Directory /var/www/YOUR_APP_DIRECTORY>
                 WSGIProcessGroup YOUR_APP_NAME
                 WSGIApplicationGroup %{GLOBAL}
-                Order allow,deny
-                Allow from all
+                Require all granted
         </Directory>
 </VirtualHost>
 ```
@@ -99,7 +97,6 @@ from app import app as application
 
 
 ### 5. Database Configuration (Postgres)
-
 * Create a New User/Role/Database (as the same name)
 ```
 # USER_NAME == ROLE_NAME == DATABASE_NAME
@@ -121,7 +118,6 @@ sudo -u USER_NAME psql
 
 
 ### 6. Set Web Server Files/Directories Permissions
-
 * In `/var/www/` directory:
 ```
 chown -R USER_NAME YOUR_APP_DIRECTORY/
@@ -132,8 +128,11 @@ chmod +t YOUR_APP_DIRECTORY/
 
 * In your project directory: `git config core.filemode false`
 
+
+
 ### 7. Resources
-- [Serverfault Thread about files/folders permissions ](https://serverfault.com/questions/357108/what-permissions-should-my-website-files-folders-have-on-a-linux-webserver)
 - [File Permissions - Sticky bit ](https://help.ubuntu.com/community/FilePermissions#Sticky_Bit)
 - [How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts)
+- [Serverfault Thread about files/folders permissions ](https://serverfault.com/questions/357108/what-permissions-should-my-website-files-folders-have-on-a-linux-webserver)
+- [Stack Over Flow: What does Apache's “Require all granted” really do?](https://serverfault.com/questions/549517/what-does-apaches-require-all-granted-really-do)
 - [VirtualHost Examples](https://httpd.apache.org/docs/2.4/vhosts/examples.html)
