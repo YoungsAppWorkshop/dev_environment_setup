@@ -72,7 +72,7 @@ from app import app as application
 
 
 ### 4. Deploy Your App using `.wsgi` script
-* Edit: `/etc/apache2/sites-available/YOUR_APP_NAME.conf`
+* Edit: `/etc/apache2/sites-available/YOUR_APP_CONFIGURATION.conf`
 ```
 <VirtualHost *:80>
         ServerName example.com
