@@ -4,6 +4,10 @@ source ~/.git-terminal-config/git-completion.bash
 # Change command prompt
 source ~/.git-terminal-config/git-prompt.sh
 
+# Setting History Size
+HISTFILESIZE=1000000000
+HISTSIZE=1000000
+
 # colors!
 red="\[\033[38;5;203m\]"
 yellow="\[\033[1;33m\]"
@@ -24,6 +28,8 @@ $reset(\!) $blue$ $reset"
 # Setting Aliases for convenience
 alias ..='cd ..'
 alias cl='curl -L'
-alias gitLog='git log --oneline --graph --decorate --all'
+alias gitlog='git log --oneline --graph --decorate --all'
+alias gitstat='git status'
+alias gitcom='git commit'
 alias now='date +"%T"'
 alias sl='ls'
