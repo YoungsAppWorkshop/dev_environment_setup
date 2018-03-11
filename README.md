@@ -28,5 +28,10 @@ Resources, guides, scripts related with Development Environment Setup.
 
 
 
+### 6. Useful Terminal Commands
+* Resources: [Terminal commands](/docs/TERMINAL.md)
+
+
+
 ### License
 * [MIT License](/LICENSE)
