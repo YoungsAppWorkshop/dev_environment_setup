@@ -92,6 +92,39 @@
   - :last	Move to the last file
   - {num}CTRL-6	Move to {num}th file
 
+* Windows
+  - :{num}split +{command} filename
+  - :split	Split window with one file
+  - :split file	Open another window with other file
+  - :split +{command}	Open a window and execute the command
+  - :{num}split	Specify number of lines of the new window
+  - :q or ZZ	Close a window
+  - CTRL-Wj	Move to bottom window
+  - CTRL-Wk	Move to upper window
+  - CTRL-W+	Increase window size
+  - CTRL-W-	Decrease window size
+  - CTRL-W=	Make windows the same size
+  - :new	Split window and start a new file
+
+* Buffers
+  - :buffers	List all buffers
+  - Buffer state flags
+    - Inactive buffer 	-
+    - Hidden buffer 	h
+    - Current buffer 	%
+    - Alternate buffer 	#
+    - Modified		+ 
+  - :buffer {num}	Select the buffer by number
+  - :buffer {file}	Select the buffer by file name
+  - :sbuffer {num}	Split window and edit the buffer
+  - :{num}bnext		Go to the next buffer
+  - :{num}bprevious	Go to the previous buffer
+  - :{num}sbnext	Split and go to the next buffer
+  - :{num}sbprevious	Split and go to the previous buffer
+  - :blast		Go to the last buffer
+  - :sblast		Split and go to the last buffer
+  - :brewind		Go to the first buffer
+  - :sbrewind		Split and go to the first buffer
 ## Others
 
 * Keyboard Macros
