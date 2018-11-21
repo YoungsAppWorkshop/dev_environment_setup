@@ -125,6 +125,32 @@
   - :sblast		Split and go to the last buffer
   - :brewind		Go to the first buffer
   - :sbrewind		Split and go to the first buffer
+
+
+## Visual Mode
+
+* Commands
+  - v             Toggle character visual mode
+  - V             Toggle line visual mode
+  - CTRL+v        Toggle block visual mode
+  - v_d           Delete highlighted texts
+  - v_D           Delete highlighted lines
+  - v_y           Yank highlighted texts
+  - v_Y           Yank highlighted lines
+  - v_c           Change highlighted texts
+  - v_C           Change highlighted lines
+  - v_J           Join highlighted lines
+  - v_gJ          Join highlighted lines without spaces
+  - v_>, v_<      Indent selected lines
+
+* Visual Block mode
+  - I		Insert texts on each line
+  - A		Append texts on each line
+  - c		Change highlighted texts on each line
+  - C		Change text to the end of each line
+  - r{char}	Replace highlighted text with {char}
+  - <, >	Shift highlighted text
+
 ## Others
 
 * Keyboard Macros
