@@ -151,6 +151,30 @@
   - r{char}	Replace highlighted text with {char}
   - <, >	Shift highlighted text
 
+
+## Commands For Programming
+
+* Syntax Highlighting
+    - :syntax on/off    Toggle syntax coloring
+
+* Indentations
+    - <<, >>            Shift a single line
+        - 5<<
+        - >{motion}
+    - :set cindent      Set C Indentation
+    - :set smartindent  Set Smart Indentation
+    - :set autoindent   Set Auto Indentation
+    - ={motion}         Apply Indentation on selected texts
+    - >%                Shift a block of text enclosed in {}
+    - >i%               Shift inner text enclosed in {}
+
+* Searching
+    - [CTRL-I, ]CTRL-I  Search for a word under the cursor
+    - gd, gD            Search for the definition of a variable
+    - [CTRL-D, ]CTRL-D  Jump to a macro definition
+    - [d, ]d, [D, ]D    Display macro definitions
+
+
 ## Others
 
 * Keyboard Macros
@@ -171,3 +195,4 @@
   - :set (no)hlsearch		Toggle search highlighting
   - :set (no)incsearch		Toggle incremental searches
   - :set (no)autowrite		Toggle auto write(save) option
+  - :set background=light(dark) Set background option
