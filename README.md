@@ -1,40 +1,26 @@
-# Dev Environment Setup
-Resources, guides, scripts related with Development Environment Setup.
+# Development Note
+Resources, guides, scripts related with Development.
+
+
+## Contents
+
+### Documents
+* [BlockChain](/docs/BLOCK_CHAIN.md)
+* [CUrl Use Cases](/docs/CURL.md)
+* [Representational State Transfer (REST)](/docs/REST.md)
+* [Terminal Commands](/docs/TERMINAL.md)
+* [VIM editor](/docs/VIM.md)
+* [Load Test](/docs/WEBSITE_LOAD_TEST.md)
 
 
 
-### 1. Ubuntu 16.04 LTS Setup
-* Resources: [Ubuntu 16.04 LTS Setup](/docs/UBUNTU_SETUP.md)
-
-
-
-### 2. Git Configuration
-* Resources: [Git Configuration Guide](/git-terminal-config/README.md)
-
-
-
-### 3. How to Deploy Flask App
-* Resources: [Deploy Flask App](/docs/DEPLOY_FLASK_APP.md)
-
-
-
-### 4. How to Deploy React App Using Apache 2.4
-* Resources: [Deploy React App Using Apache](/docs/DEPLOY_REACT_APP_USING_APACHE.md)
-
-
-
-### 5. SSL/TLS Encryption using Let's Encrypt
-* Resources: [Let's Encrypt Apache](/apache-tls-setup/README.md)
-
-
-
-### 6. Useful Terminal Commands
-* Resources: [Terminal commands](/docs/TERMINAL.md)
-
-
-
-### 7. Curl Use Cases
-* Resources: [Curl Use Cases](/docs/CURL_USE_CASES.md)
+### SETUP GUIDES
+* [Setup GIT](/setup/SETUP_GIT.md)
+* [Setup CentOS](/setup/SETUP_CENTOS.md)
+* [Setup Ubuntu](/setup/SETUP_UBUNTU.md)
+* [Setup LAMP on CentOS](/setup/SETUP_LAMP_ON_CENTOS.md)
+* [Deploy Python/Flask App](/setup/DEPLOY_FLASK_APP.md)
+* [Deploy React App Using Apache](/setup/DEPLOY_REACT_APP_USING_APACHE.md)
 
 
 
