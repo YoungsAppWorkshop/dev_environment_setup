@@ -54,6 +54,22 @@
 * Command + click: Show source code of a method
 
 
+## Section 35. Color Theory
+
+* Resources
+  - [Color Hunt](https://colorhunt.co/)
+  - [Flat UI Colors](https://flatuicolors.com/)
+  - [Material Palette](https://www.materialpalette.com/)
+  - [Color Zillar](http://www.colorzilla.com/)
+
+
+## Section 36. Typography
+* Resources
+  - What Font: Chrome extention
+  - [Font Squirrel](https://www.fontsquirrel.com/): Free Fonts download
+  - Sky Fonts: Mac App
+
+
 ## Section 43. Idea Validation
 
 * Starbucks Methods
