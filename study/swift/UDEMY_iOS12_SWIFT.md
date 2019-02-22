@@ -70,6 +70,13 @@
   - Sky Fonts: Mac App
 
 
+## Section 40. A Step-By-Step Guide to a Professional Mobile Designer's Workflow
+
+* Features
+* Mobile Design Pattern
+  - [Mobile pattern](https://mobile-patterns.com/)
+  - [Pttrns.com](https://pttrns.com)
+
 ## Section 43. Idea Validation
 
 * Starbucks Methods
