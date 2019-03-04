@@ -358,17 +358,135 @@ Since Anonymous Functions are function expressions rather than the regular funct
     - keeping a running state, etc.
 
 
+### Q. What is the definition of a higher-order function?
+
+### A.
+A higher-order function is a function that can take another function as an argument, or that returns a function as a result.
+
+ex) callback functions: Since JavaScript is single-threaded, meaning that only one operation happens at a time, each operation that’s going to happen is queued along this single thread. The strategy of passing in a function to be executed after the rest of the parent function’s operations are complete is one of the basic characteristics of languages that support higher-order functions. It allows for asynchronous behavior, so a script can continue executing while waiting for a result.
+
+
+### Q. Can you give an example of a curry function and why this syntax offers an advantage?
+
+### A.
+currying is the technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument. For example, a function that takes two arguments, one from X and one from Y, and produces outputs in Z, by currying is translated into a function that takes a single argument from X and produces as outputs functions from Y to Z. Currying is related to, but not the same as, partial application.
+
+```javascript
+const sum = x => y => x + y;
+sum (2)(1);   // returns the number 3
+sum (2);      // returns a function y => 2 + y
+```
+
+Curried functions are great to improve code reusability and functional composition.
+
+* Partial application
+  - A partial application is a function which has been applied to some, but not yet all of its arguments. In other words, it’s a function which has some arguments fixed inside its closure scope.
+  - Partial applications can take as many or as few arguments a time as desired. Curried functions on the other hand always return a unary function.
+  - All curried functions return partial applications, but not all partial applications are the result of curried functions.
+
+#### 6 fundamental terms in functional JavaScript
+
+Lambda => Arrow function
+* The term lambda originates from lambda calculus, a formal system of mathematical logic. Lambda calculus is of course Turing complete and as such it represents a universal model of computation able to build any Turing machine.
+
+First-class function
+* A first-class citizen (also type, object, entity, or value) in a given programming language is an entity which supports all the operations generally available to other entities. These operations typically include being passed as an argument, returned from a function, modified, and assigned to a variable
+
+Higher-order function
+* Higher-order function is a function that accepts other function as an argument or returns a function as a return value.
+* First-order function is a function that doesn’t accept other function as an argument and doesn’t return a function as its return value.
+
+Unary function
+* Unary function (i.e. monadic) is a function that accepts exactly one argument.
+
+Pure Function
+* A pure function is a function where the return value is only determined by its arguments without any side effects. That means that if you give a pure function the same argument a hundred times in a hundred different places of your whole application, the function will always return the same value. No external states will be changed or read by the pure function.
+* Examples
+  - `array.prototype.push()`: Push function is impure itself and it alters the array it is called on and as such produces a side effect.
+  - `array.prototype.concat()`: Concat on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects.
+* Pure functions are important as they simplify unit testing (no side effects and no need for dependency injection), they avoid tight coupling and by removing side effects, they make your application harder to break.
+
+
+### Q. Imperative versus declarative code… what’s the difference?
+
+### A.
+
+Imperative paradigm
+* Procedural and object-oriented programming belong under imperative paradigm (C, C++, C#, PHP, Java and of course Assembly).
+* Code focuses on creating statements that **change program states** by creating algorithms that tell the computer **how to do things**. It closely relates to how hardware works.
+* Typically your code will make use of *conditinal statements, loops and class inheritence*.
+
+
+Declarative paradigm
+* Logic, functional and domain-specific languages belong under declarative paradigms and they are not always Turing-complete (they are not always universal programming languages). (HTML, XML, CSS, SQL, Prolog, Haskell, F# and Lisp)
+* Declarative code focuses on building logic of software without actually describing its flow. You are saying **what** without adding **how**.
+* You create **expressions instead of statements** and evaluate functions.
+
+
+### Q. Why you might want to create static class members?
+
+### A.
+
+The `static` keyword defines a static method for a class. Static methods aren't called on instances of the class. Instead, they're called on the class itself. These are often utility functions, such as functions to create or clone objects. It is common to use static methods as an alternative constructor.
+
+
+### Q. Explain the difference between synchronous and asynchronous functions.
+
+### A.
+Synchronous way: It waits for each operation to complete, after that only it executes the next operation.
+Asynchronous way: It never waits for each operation to complete, rather it executes all operations in the first  only. The result of each operation will be handled once the result is available.
+
+
+### Q. What is event loop?
+* What is the difference between call stack and task queue?
+
+### A.
+JavaScript has a concurrency model based on an "event loop". The event loop got its name because of how it's usually implemented, which usually resembles:
+
+```javascript
+while (queue.waitForMessage()) {
+  queue.processNextMessage();
+}
+```
+
+`queue.waitForMessage()` waits synchronously for a message to arrive if there is none currently. The loop gives priority to the call stack, and it first processes everything it finds in the call stack, and once there’s nothing in there, it goes to pick up things in the message queue.
+
+* Run-to-completion
+  - Each message is processed completely before any other message is processed.
+  - A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll.
+
+
+* Adding messages
+  - In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost.
+  - The function `setTimeout` is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to 0). The time value represents the (minimum) delay after which the message will actually be pushed into the queue. If there are messages, the `setTimeout` message will have to wait for other messages to be processed.
+
+
+* Zero delays
+  - Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. The execution depends on the number of waiting tasks in the queue.
+
+
+* Never blocking
+  - A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an IndexedDB query to return or an XHR request to return, it can still process other things like user input.
+
+
+* Structure
+  - Stack: Function calls form a stack of frames.
+  - Heap: Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory.
+  -  Queue:
+    - A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.
+    - At some point during the event loop, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.
+    - The processing of functions continues until the stack is once again empty; then the event loop will process the next message in the queue (if there is one).
 
 
 
-* What is the definition of a higher-order function?
-* Can you give an example of a curry function and why this syntax offers an advantage?
-* Why you might want to create static class members?
-* Explain the difference between synchronous and asynchronous functions.
-* What is event loop?
-  * What is the difference between call stack and task queue?    
 
 
+
+
+
+
+
+### Unsolved
 * What are the differences between ES6 class and ES5 function constructors?
 * Can you offer a use case for the new arrow `=>` function syntax? How does this new syntax differ from other functions?
 * What advantage is there for using the arrow syntax for a method in a constructor?
@@ -381,19 +499,3 @@ Since Anonymous Functions are function expressions rather than the regular funct
 * What are the pros and cons of extending built-in JavaScript objects?
 * Explain the same-origin policy with regards to JavaScript.
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
-
-
-
-
-
-
-
-
-
-
-## Coding questions
-* Make this work:
-```javascript
-duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
-```
-* Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
