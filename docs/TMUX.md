@@ -23,3 +23,8 @@
 * Move to Window using number : `Prefix -> NUMBER` 
 
 * Find Window Prompt : `Prefix -> f`
+
+## TMUX Configurations
+* Set Option : `tmux set-option OPTION PARAMS` `Prefix -> :set-option OPTION PARAMS`
+* Configuration file : `~/.tmux.conf`
+* Reload Configuration file : `tmux source-file ~/.tmux.conf`
