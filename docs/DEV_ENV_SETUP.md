@@ -2,7 +2,12 @@
 
 
 ### MacOS Setup Guide
-* Link: [MacOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
+1. Follow the Instruction:
+  * Link: [MacOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
+
+2. Check List:
+  * **DO NOT REMOVE** workspace auto-switching (System Preferences > Dock)
+  * Export PATH for Homebrew: `export PATH="/usr/local/bin:$PATH"`
 
 
 ### iTerm2 Setup
@@ -31,7 +36,6 @@ brew tap caskroom/fonts && brew cask install font-source-code-pro
 ```
 brew install zsh
 ```
-
 
 2. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 ```
