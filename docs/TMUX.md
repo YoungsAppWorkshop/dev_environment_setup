@@ -1,9 +1,11 @@
 # TMUX Commands
 
+
 ### Useful Commands
 * Show Keyboard Shortcuts : `Prefix -> ?` and Search `CTRL + s`
 * List Commands : `tmux list-commands` `tmux lscm`
 * Show Messages : `Prefix -> ~`
+
 
 ### Session Related Commands
 * List Sessions : `tmux list-sessions` `tmux ls`
@@ -16,6 +18,7 @@
 * Choose Session Interface : `Prefix -> s`
 * Move to Next Session : `Prefix -> )`
 * Move to Previous Session : `Prefix ->(`
+
 
 ### Window Related Commands
 * Create a new Window : `Prefix -> c`
@@ -30,10 +33,20 @@
 
 * Find Window Prompt : `Prefix -> f`
 
+
+### Pane Related Commands
+* Split the window Vertically : `Prefix -> %`
+* Split the window Horizontally : `Prefix -> "`
+* Move to Other Panes : `Prefix -> o`
+* Kill the current Pane : `Prefix -> x`
+* Zoom in/out the Pane : `Prefix -> z`
+* Resize Pane : `Prefix -> Meta + Arrow keys`
+
 ### Show Options
 * View Global Options : `tmux show-options -g`
 * View Window Options : `tmux show-options -w`
 * View Server Options : `tmux show-options -s`
+
 
 ## TMUX Configurations
 * Set Option : `tmux set-option OPTION PARAMS` `Prefix -> :set-option OPTION PARAMS`
