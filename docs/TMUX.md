@@ -35,12 +35,14 @@
 
 
 ### Pane Related Commands
+* Show Pane index number : `Prefix -> q` -> Press Number to move to the pane
 * Split the window Vertically : `Prefix -> %`
 * Split the window Horizontally : `Prefix -> "`
 * Move to Other Panes : `Prefix -> o`
 * Kill the current Pane : `Prefix -> x`
 * Zoom in/out the Pane : `Prefix -> z`
 * Resize Pane : `Prefix -> Meta + Arrow keys`
+* Change Panes Layout : `Prefix -> SPACE BAR`
 
 ### Show Options
 * View Global Options : `tmux show-options -g`
