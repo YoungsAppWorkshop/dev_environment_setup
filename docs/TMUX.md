@@ -4,6 +4,8 @@
 ### Useful Commands
 * Show Keyboard Shortcuts : `Prefix -> ?` and Search `CTRL + s`
 * List Commands : `tmux list-commands` `tmux lscm`
+* List Key Bindings : `tmux list-keys`
+  * Key bindings for vi Copy mode : `tmux list-keys -t vi-copy`
 * Show Messages : `Prefix -> ~`
 
 
@@ -44,13 +46,25 @@
 * Resize Pane : `Prefix -> Meta + Arrow keys`
 * Change Panes Layout : `Prefix -> SPACE BAR`
 
+
 ### Show Options
 * View Global Options : `tmux show-options -g`
 * View Window Options : `tmux show-options -w`
 * View Server Options : `tmux show-options -s`
 
 
-## TMUX Configurations
+### TMUX Configurations
 * Set Option : `tmux set-option OPTION PARAMS` `Prefix -> :set-option OPTION PARAMS`
 * Configuration file : `~/.tmux.conf`
 * Reload Configuration file : `tmux source-file ~/.tmux.conf`
+
+
+### Window History
+* Clear Window History : `tmux clear-history`
+
+
+### Various TMUX Mode
+* Default Mode : Similar to vi's insert mode
+* Copy Mode : `Prefix -> [` 
+  - Similar to vi's normal mode
+* Command Mode : `Prefix -> :` -> Enter TMUX Commands
