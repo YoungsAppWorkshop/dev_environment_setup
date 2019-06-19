@@ -81,6 +81,9 @@ source $ZSH/oh-my-zsh.sh
 # Export Homebrew Path
 export PATH="/usr/local/bin:$PATH"
 
+# Export Python3 Path
+export PATH="/Users/young/Library/Python/3.7/bin:$PATH"
+
 # NVM Configurations
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
