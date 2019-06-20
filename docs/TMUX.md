@@ -71,3 +71,14 @@
 * Copy Mode : `Prefix -> [` 
   - Similar to vi's normal mode
 * Command Mode : `Prefix -> :` -> Enter TMUX Commands
+
+#### Copy Mode
+* Switch to Copy Mode : `Prefix -> [`
+  - Back to Default Mode : `q`
+* Moving Cursor(vi style) : Same as vi
+  - Page Up : `CTRL + b`
+  - Page Down : `CTRL + f`
+  - To the Top : `g`
+  - To the Bottom : `G`
+* Search Up / Down : `?` / `/`
+* Move to a Specific Line : `: -> LINE NUMBER`
