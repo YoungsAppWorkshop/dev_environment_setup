@@ -75,6 +75,10 @@
 #### Copy Mode
 * Switch to Copy Mode : `Prefix -> [`
   - Back to Default Mode : `q`
+* Paste Buffer : `Prefix -> ]`
+* Show Buffer List : `Prefix -> =`
+
+##### Copy Mode Cursor Movements
 * Moving Cursor(vi style) : Same as vi
   - Page Up : `CTRL + b`
   - Page Down : `CTRL + f`
@@ -82,3 +86,7 @@
   - To the Bottom : `G`
 * Search Up / Down : `?` / `/`
 * Move to a Specific Line : `: -> LINE NUMBER`
+* Select Text
+  - Start Selection : `SPACE BAR`
+  - End Selection : `ENTER`
+  - Toggle Rectangular Selection: `v`
