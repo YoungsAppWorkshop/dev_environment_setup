@@ -113,3 +113,45 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias c="clear"
+
+#.# Better Git Logs.
+### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
+
+# Git Commit, Add all and Push — in one step.
+function gitAddAllAndCommit() {
+    git add . && git commit -m "$*"
+}
+
+function gcap() {
+    git add . && git commit -m "$*" && git push
+}
+
+# NEW.
+function gnew() {
+    gitAddAllAndCommit  "📦 NEW: $@"
+}
+
+# IMPROVE.
+function gimp() {
+    gitAddAllAndCommit "👌 IMPROVE: $@"
+}
+
+# FIX.
+function gfix() {
+    gitAddAllAndCommit "🐛 FIX: $@"
+}
+
+# RELEASE.
+function grlz() {
+    gitAddAllAndCommit "🚀 RELEASE: $@"
+}
+
+# DOC.
+function gdoc() {
+    gitAddAllAndCommit "📖 DOC: $@"
+}
+
+# TEST.
+function gtst() {
+    gitAddAllAndCommit "✅ TEST: $@"
+}
