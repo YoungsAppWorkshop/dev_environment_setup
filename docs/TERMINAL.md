@@ -1,6 +1,11 @@
 # Terminal Commands
 
 
+### Useful Commands
+
+* Delete All Files Recursively with a extension
+  - `find . -type f -name '*.o' -delete`
+
 
 ### Compressing and Archiving Files
 
