@@ -21,14 +21,21 @@
 ## Navigation
 
 - Sidebar Menus -> `CMD + SHIFT + D/E/F/G/X`
+
 - Tab Navigation
   - All Tabs : `CMD + ALT + LEFT/RIGHT` or `CMD + SHIFT + [ / ]`
   - In Group : `CTRL + TAB`
+
 - Toggle Panel -> `CMD + J`
   - Problems -> `CMD + SHIFT + M`
   - Output -> `CMD + SHIFT + U`
   - Debug Console -> `CMD + SHIFT + Y`
   - Terminal
+
+- Breadcrumbs 
+  - Focus Breadcrumbs : `CMD + SHIFT + ;`
+  - Focus Current Location : `CMD + SHIFT + .`
+  - Move Left / Right : `ALT + LEFT/RIGHT`
 
 
 ## Command Pallete
