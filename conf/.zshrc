@@ -118,6 +118,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 
 alias c="clear"
 alias s="source ~/.zshrc && echo 'Configurations Updated!!'"
+alias ywa="yarn watch"
 
 #.# Better Git Logs.
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
@@ -133,30 +134,30 @@ function gcap() {
 
 # NEW.
 function gnew() {
-    gitAddAllAndCommit  "📦 NEW: $@"
+    gcap  "📦 NEW: $@"
 }
 
 # IMPROVE.
 function gimp() {
-    gitAddAllAndCommit "👌 IMPROVE: $@"
+    gcap "👌 IMPROVE: $@"
 }
 
 # FIX.
 function gfix() {
-    gitAddAllAndCommit "🐛 FIX: $@"
+    gcap "🐛 FIX: $@"
 }
 
 # RELEASE.
 function grlz() {
-    gitAddAllAndCommit "🚀 RELEASE: $@"
+    gcap "🚀 RELEASE: $@"
 }
 
 # DOC.
 function gdoc() {
-    gitAddAllAndCommit "📖 DOC: $@"
+    gcap "📖 DOC: $@"
 }
 
 # TEST.
 function gtst() {
-    gitAddAllAndCommit "✅ TEST: $@"
+    gcap "✅ TEST: $@"
 }
