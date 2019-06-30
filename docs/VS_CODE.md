@@ -37,6 +37,8 @@
   - Focus Current Location : `CMD + SHIFT + .`
   - Move Left / Right : `ALT + LEFT/RIGHT`
 
+- Navigate between Editor Groups : `CMD + 0 / 1 / 2`
+
 
 ## Command Pallete
 
@@ -55,6 +57,7 @@
 - Close a Editor -> `CMD + W`
 - Close All Editors -> `ALT + W`
 
+
 ### Lines
 
 - Line iterations -> `CMD | ALT | SHIFT + LEFT/RIGHT`
@@ -63,11 +66,13 @@
 - Cut/Copy/Paste a line -> `CMD + X/C/V`
 - Move line up and down -> `ALT + UP/DOWN`
 
+
 ### Words
 
 - Next Occurence -> `CMD + D`
 - Move Selection to Next -> `CMD + K -> CMD + D`
 - Multi-Cursor Selection (Keyboard) -> `CMD + SHIFT + L`
+
 
 ### Cursors
 
@@ -86,3 +91,4 @@
 - Toggle *Italic* -> `CMD + SHIFT + I`
 - Auto Format Table -> `ALT + SHIFT + F`
 - Check / Uncheck Check List -> `ALT + C`
+
