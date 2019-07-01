@@ -119,6 +119,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 alias c="clear"
 alias s="source ~/.zshrc && echo 'Configurations Updated!!'"
 alias ywa="yarn watch"
+alias ydb="yarn debug"
 
 #.# Better Git Logs.
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
