@@ -77,6 +77,7 @@
   - Back to Default Mode : `q`
 * Paste Buffer : `Prefix -> ]`
 * Show Buffer List : `Prefix -> =`
+* Save Buffer to a File : `:save-buffer ~/PATH/FILENAME`
 
 ##### Copy Mode Cursor Movements
 * Moving Cursor(vi style) : Same as vi
