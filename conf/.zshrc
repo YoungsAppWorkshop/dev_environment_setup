@@ -2,7 +2,7 @@
 export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Export Homebrew Path
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Export Python3 Path
 export PATH="/Users/young/Library/Python/3.7/bin:$PATH"
