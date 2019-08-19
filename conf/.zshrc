@@ -91,6 +91,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
+# Java Environment variable
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Configure Powerlevel9k Cursor Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
