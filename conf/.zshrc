@@ -72,7 +72,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew colored-man-pages colorize git nvm osx pip python vagrant yarn)
+plugins=(colored-man-pages colorize git nvm osx pip python vagrant yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,12 +87,8 @@ export PATH="/Users/young/Library/Python/3.7/bin:$PATH"
 # Export MySQL@5.6 Path
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
-# NVM Configurations
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-
 # Java Environment variable
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Configure Powerlevel9k Cursor Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
