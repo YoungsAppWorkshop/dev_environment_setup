@@ -32,7 +32,7 @@
   - Debug Console -> `CMD + SHIFT + Y`
   - Terminal
 
-- Breadcrumbs 
+- Breadcrumbs
   - Focus Breadcrumbs : `CMD + SHIFT + ;`
   - Focus Current Location : `CMD + SHIFT + .`
   - Move Left / Right : `ALT + LEFT/RIGHT`
@@ -91,4 +91,3 @@
 - Toggle *Italic* -> `CMD + SHIFT + I`
 - Auto Format Table -> `ALT + SHIFT + F`
 - Check / Uncheck Check List -> `ALT + C`
-

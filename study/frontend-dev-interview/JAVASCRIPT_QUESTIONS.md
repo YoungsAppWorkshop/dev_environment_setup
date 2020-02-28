@@ -10,9 +10,9 @@
 
 * Function context: Inside a function, the value of `this` depends on how the function is called.
 
-  - Where a function uses the `this` keyword in its body, its value can be bound to a particular object in the call using the  `Function.prototype.call()` or  `Function.prototype.apply()` methods
+  * Where a function uses the `this` keyword in its body, its value can be bound to a particular object in the call using the  `Function.prototype.call()` or  `Function.prototype.apply()` methods
 
-  ```javascript
+  ```js
   // An object can be passed as the first argument to call or apply and this will be bound to it.
   var obj = { a: 'Custom' };
 
@@ -28,10 +28,10 @@
   whatsThis.apply(obj); // 'Custom'
   ```
 
-  - Where the value of `this` is not set by the call, `this` will default to the global object, which is window in a browser.(Global in Node.js)
-  - In strict mode, however, the value of `this` remains at whatever it was set to when entering the execution context
+  * Where the value of `this` is not set by the call, `this` will default to the global object, which is window in a browser.(Global in Node.js)
+  * In strict mode, however, the value of `this` remains at whatever it was set to when entering the execution context
 
-  ```javascript
+  ```js
   // strict mode
   function f2() {
     'use strict'; // see strict mode
@@ -41,15 +41,15 @@
   f2() === undefined; // true, because f2 was called directly and not as a method or property of an object (e.g. window.f2())
   ```
 
-  - ES5 `Function.prototype.bind()` method: Creates a new function with the same body and scope, permanently bound to the first argument of bind. Bind only works once.
-  - Arrow function: In arrow functions, `this` retains the value of the enclosing lexical context's `this`. No matter what, arrow functions' `this` is set to what it was when it was created.
+  * ES5 `Function.prototype.bind()` method: Creates a new function with the same body and scope, permanently bound to the first argument of bind. Bind only works once.
+  * Arrow function: In arrow functions, `this` retains the value of the enclosing lexical context's `this`. No matter what, arrow functions' `this` is set to what it was when it was created.
 
 
 * As an object method
-  - When a function is called as a method of an object, its `this` is set to the object the method is called on.
-  - The `this` binding is only affected by the most immediate member reference.
+  * When a function is called as a method of an object, its `this` is set to the object the method is called on.
+  * The `this` binding is only affected by the most immediate member reference.
 
-  ```javascript
+  ```js
   var o = {prop: 37};
 
   function independent() {
@@ -66,15 +66,15 @@
 
 
 * As a constructor
-  - When a function is used as a constructor (with the new keyword), its `this` is bound to the new object being constructed.
+  * When a function is used as a constructor (with the new keyword), its `this` is bound to the new object being constructed.
 
 
 * As a DOM event handler
-  - When a function is used as an event handler, its this is set to the element the event fired from.
+  * When a function is used as an event handler, its this is set to the element the event fired from.
 
 
 * In an inline event handler
-  - When the code is called from an inline on-event handler, its `this` is set to the DOM element on which the listener is placed
+  * When the code is called from an inline on-event handler, its `this` is set to the DOM element on which the listener is placed
 
 
 ### Q. Can you explain what `Function.call` and `Function.apply` do? What's the notable difference between the two?
@@ -101,7 +101,7 @@ In JavaScript, objects have a special hidden property `[[Prototype]]` (as named 
 ### A.
 Undeclared is any variable that has not been declared yet. Console throws an error for this. Undefined is a declared variable that has no assigned value, yet. `null` is a special value which represents "nothing", "empty" or "value unknown".
 The meaning of `undefined` is "value is not assigned".
-```javascript
+```js
 let a;        // undefined
 let b = null; // null
 c             // undeclared
@@ -113,7 +113,7 @@ typeof(b)     // object. It is an officially recognized error in typeof, kept fo
 
 ### A.
 
-```javascript
+```js
 function makeAdder(x) {
   return function(y) {
     return x + y;
@@ -132,8 +132,8 @@ A closure is the combination of a function and the lexical environment within wh
 In the above example we use our function factory to create two new functions — one that adds 5 to its argument, and one that adds 10. `add5` and `add10` are both closures. They share the same function body definition, but store different lexical environments. In `add5`'s lexical environment, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
 
 Use cases:
-  - You can use a closure anywhere that **you might normally use an object with only a single method.** ex) event handler
-  - [Emulating private methods with closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Emulating_private_methods_with_closures)
+  * You can use a closure anywhere that **you might normally use an object with only a single method.** ex) event handler
+  * [Emulating private methods with closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#Emulating_private_methods_with_closures)
 
 
 ### Q. Explain event delegation.
@@ -177,7 +177,7 @@ Host — objects provided by environment like window, document by browser. N
 ### A.
 Feature detection checks a feature for existence, e.g.:
 
-```javascript
+```js
 if (window.XMLHttpRequest) {
     new XMLHttpRequest();
 }
@@ -185,7 +185,7 @@ if (window.XMLHttpRequest) {
 
 Feature inference checks for a feature just like feature detection, but uses another function because it assumes it will also exist, e.g.:
 
-```javascript
+```js
 if (document.getElementsByTagName) {
     element = document.getElementById(id);
 }
@@ -193,7 +193,7 @@ if (document.getElementsByTagName) {
 
 Checking the UA string is an old practice and should not be used anymore. You keep changing the UA checks and never benefit from newly implemented features, e.g.:
 
-```javascript
+```js
 if (navigator.userAgent.indexOf("MSIE 7") > -1){
     //do something
 }
@@ -261,7 +261,7 @@ Web/Browser console using `console.log`. Developer Tools.
 
 It's possible that the Person constructor was written to avoid just this pitfall. It would look something like this:
 
-```javascript
+```js
 function Person(name) {
   if (this instanceof Person) {
     this.name = name;
@@ -296,7 +296,7 @@ Browsers not supporting strict mode will run strict mode code with different beh
 * Scope: `var` declarations are globally scoped or function/locally scoped
 * `var` variables can be re-declared and updated. That means that we can do this within the same scope and won't get an error. This can cause some issues.
 
-```javascript
+```js
 var greeter = "hey hi";
 var times = 4;
 
@@ -309,7 +309,7 @@ console.log(greeter) //"say Hello instead"
 
 * Hoisting of `var`: Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
 
-```javascript
+```js
 console.log (greeter);
 var greeter = "say hello"
 
@@ -342,20 +342,20 @@ Since Anonymous Functions are function expressions rather than the regular funct
 ### A.
 
 * What is an example of an immutable object in JavaScript?
-  - Mutable is a type of variable that can be changed. In JavaScript, only objects and arrays are mutable, not primitive values.
-  - A mutable object is an object whose state can be modified after it is created. Immutables are the objects whose state cannot be changed once the object is created.
-  - String and Numbers are Immutable. (You can make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.)
+  * Mutable is a type of variable that can be changed. In JavaScript, only objects and arrays are mutable, not primitive values.
+  * A mutable object is an object whose state can be modified after it is created. Immutables are the objects whose state cannot be changed once the object is created.
+  * String and Numbers are Immutable. (You can make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.)
 * What are the pros and cons of immutability?
-  - Immutability: You are always creating a copy of the old data structure and applying the changes to the copy instead of changing the original data structure.
-  - pros: Simpler Programming
-    - Persistence: You have access to the older versions of your data structure until you use garbage collection method to get rid of it
-    - Easier to Debug: Since immutability stresses removing all side-effects and using pure functions, this allows programmers to focus on one function that may have created the bug instead of following this chain of references to see what function possibly mutated our original data structure.
-    - Easier Deep Value Comparisons: Since you’re always creating new copies of the old data structure in memory, you can just compare the memory locations of the data structures to see if their values are the same or not.
-    - Concurrency: Immutability makes it easier to manage concurrency (without locks or snapshots).
-  - cons: It makes some operations harder
-    - Modifying state in large objects quickly,
-    - Making copies and keeping them takes SPACE.
-    - keeping a running state, etc.
+  * Immutability: You are always creating a copy of the old data structure and applying the changes to the copy instead of changing the original data structure.
+  * pros: Simpler Programming
+    * Persistence: You have access to the older versions of your data structure until you use garbage collection method to get rid of it
+    * Easier to Debug: Since immutability stresses removing all side-effects and using pure functions, this allows programmers to focus on one function that may have created the bug instead of following this chain of references to see what function possibly mutated our original data structure.
+    * Easier Deep Value Comparisons: Since you’re always creating new copies of the old data structure in memory, you can just compare the memory locations of the data structures to see if their values are the same or not.
+    * Concurrency: Immutability makes it easier to manage concurrency (without locks or snapshots).
+  * cons: It makes some operations harder
+    * Modifying state in large objects quickly,
+    * Making copies and keeping them takes SPACE.
+    * keeping a running state, etc.
 
 
 ### Q. What is the definition of a higher-order function?
@@ -371,7 +371,7 @@ ex) callback functions: Since JavaScript is single-threaded, meaning that only o
 ### A.
 currying is the technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument. For example, a function that takes two arguments, one from X and one from Y, and produces outputs in Z, by currying is translated into a function that takes a single argument from X and produces as outputs functions from Y to Z. Currying is related to, but not the same as, partial application.
 
-```javascript
+```js
 const sum = x => y => x + y;
 sum (2)(1);   // returns the number 3
 sum (2);      // returns a function y => 2 + y
@@ -380,9 +380,9 @@ sum (2);      // returns a function y => 2 + y
 Curried functions are great to improve code reusability and functional composition.
 
 * Partial application
-  - A partial application is a function which has been applied to some, but not yet all of its arguments. In other words, it’s a function which has some arguments fixed inside its closure scope.
-  - Partial applications can take as many or as few arguments a time as desired. Curried functions on the other hand always return a unary function.
-  - All curried functions return partial applications, but not all partial applications are the result of curried functions.
+  * A partial application is a function which has been applied to some, but not yet all of its arguments. In other words, it’s a function which has some arguments fixed inside its closure scope.
+  * Partial applications can take as many or as few arguments a time as desired. Curried functions on the other hand always return a unary function.
+  * All curried functions return partial applications, but not all partial applications are the result of curried functions.
 
 #### 6 fundamental terms in functional JavaScript
 
@@ -402,8 +402,8 @@ Unary function
 Pure Function
 * A pure function is a function where the return value is only determined by its arguments without any side effects. That means that if you give a pure function the same argument a hundred times in a hundred different places of your whole application, the function will always return the same value. No external states will be changed or read by the pure function.
 * Examples
-  - `array.prototype.push()`: Push function is impure itself and it alters the array it is called on and as such produces a side effect.
-  - `array.prototype.concat()`: Concat on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects.
+  * `array.prototype.push()`: Push function is impure itself and it alters the array it is called on and as such produces a side effect.
+  * `array.prototype.concat()`: Concat on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects.
 * Pure functions are important as they simplify unit testing (no side effects and no need for dependency injection), they avoid tight coupling and by removing side effects, they make your application harder to break.
 
 
@@ -443,7 +443,7 @@ Asynchronous way: It never waits for each operation to complete, rather it execu
 ### A.
 JavaScript has a concurrency model based on an "event loop". The event loop got its name because of how it's usually implemented, which usually resembles:
 
-```javascript
+```js
 while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
@@ -452,30 +452,30 @@ while (queue.waitForMessage()) {
 `queue.waitForMessage()` waits synchronously for a message to arrive if there is none currently. The loop gives priority to the call stack, and it first processes everything it finds in the call stack, and once there’s nothing in there, it goes to pick up things in the message queue.
 
 * Run-to-completion
-  - Each message is processed completely before any other message is processed.
-  - A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll.
+  * Each message is processed completely before any other message is processed.
+  * A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll.
 
 
 * Adding messages
-  - In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost.
-  - The function `setTimeout` is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to 0). The time value represents the (minimum) delay after which the message will actually be pushed into the queue. If there are messages, the `setTimeout` message will have to wait for other messages to be processed.
+  * In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost.
+  * The function `setTimeout` is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to 0). The time value represents the (minimum) delay after which the message will actually be pushed into the queue. If there are messages, the `setTimeout` message will have to wait for other messages to be processed.
 
 
 * Zero delays
-  - Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. The execution depends on the number of waiting tasks in the queue.
+  * Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. The execution depends on the number of waiting tasks in the queue.
 
 
 * Never blocking
-  - A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an IndexedDB query to return or an XHR request to return, it can still process other things like user input.
+  * A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an IndexedDB query to return or an XHR request to return, it can still process other things like user input.
 
 
 * Structure
-  - Stack: Function calls form a stack of frames.
-  - Heap: Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory.
-  -  Queue:
-    - A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.
-    - At some point during the event loop, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.
-    - The processing of functions continues until the stack is once again empty; then the event loop will process the next message in the queue (if there is one).
+  * Stack: Function calls form a stack of frames.
+  * Heap: Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory.
+  *  Queue:
+    * A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.
+    * At some point during the event loop, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.
+    * The processing of functions continues until the stack is once again empty; then the event loop will process the next message in the queue (if there is one).
 
 
 
@@ -487,6 +487,7 @@ while (queue.waitForMessage()) {
 
 
 ### Unsolved
+
 * What are the differences between ES6 class and ES5 function constructors?
 * Can you offer a use case for the new arrow `=>` function syntax? How does this new syntax differ from other functions?
 * What advantage is there for using the arrow syntax for a method in a constructor?
