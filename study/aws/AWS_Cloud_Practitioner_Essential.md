@@ -140,3 +140,67 @@ Security groups:
 
 - Act as built-in firewalls
 - Control accessibility to instances
+
+## Module 3: AWS Integrated Services
+
+### Application Load Balancer
+
+Application Load Balancer is the second type of load balancer introduced as part of the Elastic Load Balancing service. It offers most of the features provided by the Classic Load Balancer, and adds some important features and enhancements that lend it to unique use cases.
+
+Enhanced Features:
+
+- Supported Protocols: HTTP, HTTPS, HTTP/2, and WebSockets
+- CloudWatch Metrics: Additional load balance metrics and Target Group metric dimension
+- Access Logs: Ability to see connection details for WebSocket connections
+- Health Checks: Insight into target and application health at more granular level
+
+Additional Features:
+
+- Path and Host-based Routing
+  - Path-based provides rules that foward requests to different target groups
+  - Host-based can be used to define rules that forward requests to different target groups based on host name
+- Deletion Protections & Request Tracing
+  - Request Tracing can be used to track HTTP requests from clients to target
+- Dynamic Ports
+  - Amazon ECS integrates with Application Load Balancer to expose Dynamic Ports utilized by scheduled containers
+- AWS WAF
+- Native IPv6 Support
+
+Use Case:
+
+- Use as containers to host micro services and route to the applications from a single load balancer
+
+### Auto Scaling
+
+Auto Scaling helps you ensure that you have the correct number of Amazon EC2 instances available to handle the load for your application.
+
+- Scalability: How can I ensure that my workload has enough EC2 resources to meet fluctuating performance requirements?
+- Automation: How can I automate EC2 resource provisioning to occur on-demand?
+
+Terminology:
+
+- Scaling Out: Launch Instances
+- Scaling In: Terminate Instances
+
+Auto Scaling Components: Launce Configuration -> Auto Scaling Group -> Auto Scaling Policy
+
+- Launce Configuration: What?
+  - AMI
+  - Instance type
+  - Security Groups
+  - Roles
+- Auto Scaling Group: Where?
+  - VPC and Subnet(s)
+  - Load balancer
+  - Minimum instances
+  - Maximum instances
+  - Desired capacity
+- Auto Scaling Policy: When?
+  - Scheduled
+  - On-demand
+  - Scale-out policy
+  - Scale-in policy
+
+### Amazon Route 53
+
+DNS(Domain Name System)
