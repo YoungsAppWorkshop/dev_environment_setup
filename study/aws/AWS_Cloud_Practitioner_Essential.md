@@ -204,3 +204,88 @@ Auto Scaling Components: Launce Configuration -> Auto Scaling Group -> Auto Scal
 ### Amazon Route 53
 
 DNS(Domain Name System)
+
+### Amazon Relational Database Services(RDS)
+
+Challenges of Relational Databases:
+
+- Server maintenance and Energy footprint
+- Software install and patches
+- Database backups and high availability
+- Limits on scalability
+- Data security
+- OS install and patches
+
+Amazon RDS is a managed service that sets up and operates a relational database in the cloud.
+
+AWS manages:
+
+- OS installation and patches
+- Database software install and patches
+- Database backups
+- High availability
+- Scaling
+- Power and rack & stack
+- Server maintenance
+
+You manage:
+
+- Application optimization
+
+Amazon RDS DB instances:
+
+- Amazon RDS
+  - DB Instance Class
+    - CPU
+    - Memory
+    - Network performance
+  - DB Instance Storage
+    - Magnetic
+    - General purpose (SSD)
+    - Provisioned IOPS
+- DB Engines
+  - MySQL
+  - Amazon Aurora
+  - MS SQL Server
+  - PostgreSQL
+  - MariaDB
+  - Oracle
+
+How RDS Works:
+
+![RDS Image 01](./imgs/RDS01.PNG)
+![RDS Image 01](./imgs/RDS02.PNG)
+
+### AWS Lambda
+
+What is AWS Lambda:
+
+- Fully-Managed serverless compute
+- Event-driven execution
+- Sub-second metering
+- Multiple languages supported
+
+### AWS Elastic Beanstalk
+
+What is AWS Elastic Beanstalk:
+
+- Platform as a Service
+- Allows quick deployment of your applications
+- Reduces management complexity
+- Keeps control in your hands
+  - Choose your instance type
+  - Choose your database
+  - Set and adjust Auto Scaling
+  - Update your application
+  - Access server log files
+  - Enable HTTPS on load balancer
+- Supports a large range of platforms
+  - GO, Java SE, Node.js ...
+
+Components:
+
+- Application Service
+- HTTP Service
+- Operating System
+- Language interpreter
+- Host
