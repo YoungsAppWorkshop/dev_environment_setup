@@ -1,4 +1,4 @@
-# SQLAlchemy Basics
+# Lesson 2-3. SQLAlchemy Basics
 
 ## 1. Introduction
 

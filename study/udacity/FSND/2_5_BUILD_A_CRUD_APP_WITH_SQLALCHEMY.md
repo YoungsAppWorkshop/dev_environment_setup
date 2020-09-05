@@ -1,4 +1,4 @@
-# Lesson 5. Build a CRUD App with SQLAlchemy
+# Lesson 2-5. Build a CRUD App with SQLAlchemy
 
 ## Model View Controller (MVC)
 

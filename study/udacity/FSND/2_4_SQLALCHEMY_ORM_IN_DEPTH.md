@@ -1,4 +1,4 @@
-# Lesson 4. SQLAlchemy ORM in Depth
+# Lesson 2-4. SQLAlchemy ORM in Depth
 
 ## `Model.query`
 
