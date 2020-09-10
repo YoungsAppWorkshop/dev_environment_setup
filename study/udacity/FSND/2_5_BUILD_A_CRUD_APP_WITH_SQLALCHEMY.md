@@ -97,3 +97,111 @@ except:
 finally:
     db.session.close()
 ```
+
+## Relationships & Joins
+
+**Read More**:
+
+- [SQL Joins Explained](http://www.sql-join.com/sql-join-types)
+- [SQL | Join (Inner, Left, Right and Full Joins)](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/)
+
+## `db.relationship`
+
+![img-01](./imgs/img-2-7-1.png)
+
+SQLAlchemy configures the settings between model relationships *once*, and generates `JOIN` statements for us whenever we need them.
+
+- `db.relationship` is an interface offered in SQLAlchemy to provide and configure a mapped relationship between two models.
+- `db.relationship` is defined on the parent model, and it sets:
+  - the name of its children (e.g. children), for example `parent1.children`
+  - the name of a parent on a child using the `backref`, for example `child1.my_amazing_parent`
+
+**Resources**:
+
+- [Flask-SQLAlchemy - Simple Relationships](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#simple-relationships)
+- [SQLAlchemy Docs: Relationship API](https://docs.sqlalchemy.org/en/13/orm/relationship_api.html#sqlalchemy.orm.relationship)
+
+## Configuring Relationships
+
+When calling `child1.some_parent`, SQLAlchemy determines when we load the parent from the database.
+
+### Why is it important to care about when we load parents
+
+- Joins are expensive.
+- We should avoid having the user idling. *Delays more than **150ms** are noticeable*, so milliseconds of performance matter!
+- We should make sure the joins happen during a time and place in the UX that doesn't negatively impact the experience too much.
+
+### Lazy loading vs. Eager loading
+
+**Lazy loading**:
+
+Load needed joined data only as needed. Default in SQLAlchemy.
+
+- **Pro**: no initial wait time. Load only what you need.
+- **Con**: produces a join SQL call every time there is a request for a joined asset. Bad if you do this a lot.
+
+**Eager loading**:
+
+Load all needed joined data objects, all at once.
+
+- **Pro**: reduces further queries to the database. Subsequent SQL calls read existing data
+- **Con**: loading the joined table has a long upfront initial load time.
+
+`lazy=True` (lazy loading) is the default option in `db.relationship`:
+
+```python
+children = db.relationship('ChildModel', backref='some_parent', lazy=True)
+```
+
+See the [SQLAlchemy Docs on Relationship Loading Techniques](https://docs.sqlalchemy.org/en/13/orm/loading_relationships.html) for more loading options.
+
+### Other relationship options: `collection_class` and `cascade`
+
+`db.relationship`
+
+- Allows SQLAlchemy to identity relationships between models
+- Links relationships with backrefs (`child1.some_parent`)
+- Configures relationship dynamics between parents and children, including options like `lazy`, `collection_class`, and `cascade`
+
+**More Read**:
+
+- [SQLALchemy ORM Relationship Docs](https://docs.sqlalchemy.org/en/13/orm/relationship_api.html#sqlalchemy.orm.relationship)
+
+## Foreign Key Constraint Setup
+
+`db.relationship` does not set up foreign key constraints for you. We need to add a column, `some_parent_id`, on the **child** model that has a foreign key constraint. Whereas we set `db.relationship` on the **parent** model, we set the foreign key constraint on the **child** model. A foreign key constraint prefers **referential integrity** from one table to another, by ensuring that the foreign key column always maps a primary key in the foreign table.
+
+![img-02](./imgs/img-2-7-2.png)
+![img-03](./imgs/img-2-7-3.png)
+
+## Many-To-Many Relationships
+
+### Types of relationships
+
+![img-04](./imgs/img-2-7-4.png)
+![img-05](./imgs/img-2-7-5.png)
+![img-06](./imgs/img-2-7-6.png)
+
+### Keys in relationships; association tables
+
+- In *one-to-many* and *one-to-one*, the **foreign key** is established on the child model.
+- In *many-to-many*, a special **association table** exists to join the two tables together, storing two foreign keys that link to the two foreign tables that have a relationship with each other.
+
+### Example with Order, Product, and Order Item
+
+```python
+order_items = db.Table('order_items',
+    db.Column('order_id', db.Integer, db.ForeignKey('order.id'), primary_key=True),
+    db.Column('product_id', db.Integer, db.ForeignKey('product.id'), primary_key=True)
+)
+
+class Order(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    status = db.Column(db.String(), nullable=False)
+    products = db.relationship('Product', secondary=order_items,
+        backref=db.backref('orders', lazy=True))
+
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(), nullable=False)
+```
