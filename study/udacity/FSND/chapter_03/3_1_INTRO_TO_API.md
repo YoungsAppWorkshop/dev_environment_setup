@@ -12,7 +12,7 @@ An API is an *interface*. It's something that has been created to help two diffe
 2. The API provides a standard way of accessing the application
 3. It makes it much easier to understand how to access the application's data
 
-## RESTful APIs
+## 5. RESTful APIs
 
 **REST** stands for *Representational State Transfer*, which is an architectural style introduced by [Roy Fielding in 2000](https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf).
 
