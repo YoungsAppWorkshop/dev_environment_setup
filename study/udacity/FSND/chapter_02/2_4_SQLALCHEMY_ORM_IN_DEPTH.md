@@ -109,7 +109,7 @@ More Read: [Docs for the SQLAlchemy Query API](https://docs.sqlalchemy.org/en/13
 
 ## SQLAlchemy Object Lifecycle
 
-![img-01](./imgs/img-2-4-1.png)
+![img-01](../imgs/img-2-4-1.png)
 
 ### Takeaways
 
@@ -117,7 +117,7 @@ Within a session, we create transactions every time we want to commit work to th
 
 ### Stages
 
-![img-02](./imgs/img-2-4-2.png)
+![img-02](../imgs/img-2-4-2.png)
 
 #### 1. Transient
 
@@ -133,8 +133,8 @@ An object was attached to a session. "Undo" becomes available via `db.session.ro
 
 #### 3. Flushed
 
-![img-03](./imgs/img-2-4-3.png)
-![img-04](./imgs/img-2-4-4.png)
+![img-03](../imgs/img-2-4-3.png)
+![img-04](../imgs/img-2-4-4.png)
 
 About ready to be committed to the database, translating actions into SQL command statements for the engine. It occurs:
 
@@ -143,6 +143,6 @@ About ready to be committed to the database, translating actions into SQL comman
 
 #### 4. Committed
 
-![img-05](./imgs/img-2-4-5.png)
+![img-05](../imgs/img-2-4-5.png)
 
 Manually called for a change to persist to the database (permanently). Session's transaction is cleared for a new set of changes.

@@ -26,7 +26,7 @@ An ORM is considered to be the highest level of abstraction you can add to a web
 
 ### Layers of SQLAlchemy
 
-![img-01](./imgs/img-2-3-2-1.png)
+![img-01](../imgs/img-2-3-2-1.png)
 
 1. DBAPI
 2. The Dialect
@@ -37,7 +37,7 @@ An ORM is considered to be the highest level of abstraction you can add to a web
 
 ## 4. The Connection Pool
 
-![img-01](./imgs/img-2-3-4-1.png)
+![img-01](../imgs/img-2-3-4-1.png)
 
 ## 5. The Engine
 
@@ -54,13 +54,13 @@ An ORM is considered to be the highest level of abstraction you can add to a web
 
 ## 6. SQL Expressions
 
-![img-01](./imgs/img-2-3-6-1.png)
+![img-01](../imgs/img-2-3-6-1.png)
 
 ## 7. SQLAlchemy ORM
 
 SQLAlchemy ORM lets you compose SQL expressions by mapping python classes of objects to tables in the database. It is the highest layer of abstraction in SQLALchemy. It wraps the SQL Expressions and Engine to work together to interact with the database.
 
-![img-01](./imgs/img-2-3-7-1.png)
+![img-01](../imgs/img-2-3-7-1.png)
 
 SQLAlchemy is split into two libraries:
 
@@ -121,7 +121,7 @@ db = SQLAlchemy(app)
 
 `SQLALCHEMY_DATABASE_URI`:
 
-![img-01](./imgs/img-2-3-10-1.png)
+![img-01](../imgs/img-2-3-10-1.png)
 
 ## 11. `db.Model` and defining models
 
@@ -136,7 +136,7 @@ db = SQLAlchemy(app)
 - `db.Model` lets us create and manipulate data models
 - `db.session` lets us create and manipulate database transactions
 
-![img-01](./imgs/img-2-3-11-1.png)
+![img-01](../imgs/img-2-3-11-1.png)
 
 **Declaring classes**:
 
@@ -200,7 +200,7 @@ db.session.commit()
 
 ## 15. SQLAlchemy Data Types
 
-![img-01](./imgs/img-2-3-15-1.png)
+![img-01](../imgs/img-2-3-15-1.png)
 
 **Resources**:
 
@@ -209,7 +209,7 @@ db.session.commit()
 
 ## 16. SQLAlchemy Constraints
 
-![img-01](./imgs/img-2-3-16-1.png)
+![img-01](../imgs/img-2-3-16-1.png)
 
 **Example**:
 
@@ -226,7 +226,7 @@ class Product(db.Model):
 
 ## 17. Recap
 
-![img-01](./imgs/img-2-3-17-1.png)
+![img-01](../imgs/img-2-3-17-1.png)
 
 **Resources**:
 

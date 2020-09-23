@@ -7,7 +7,7 @@
 - MVC stands for Model-View-Controller, a common pattern for architecting web applications
 - Describes the 3 layers of the application we are developing
 
-![img-01](./imgs/img-2-5-1.png)
+![img-01](../imgs/img-2-5-1.png)
 
 **Layers**:
 
@@ -21,7 +21,7 @@
 
 - Creating, updating, and deleting information from a database requires handling user input on what is being created/updated/deleted. This will be the focus of the rest of this series.
 
-![img-02](./imgs/img-2-5-2.png)
+![img-02](../imgs/img-2-5-2.png)
 
 **MVC Development**: How we'd add Create To-Do item functionality
 
@@ -45,7 +45,7 @@ There are 3 methods of getting user data from a view to a controller.
 - Forms
 - JSON
 
-![img-03](./imgs/img-2-5-3.png)
+![img-03](../imgs/img-2-5-3.png)
 
 ### URL query parameters
 
@@ -107,7 +107,7 @@ finally:
 
 ## `db.relationship`
 
-![img-01](./imgs/img-2-7-1.png)
+![img-01](../imgs/img-2-7-1.png)
 
 SQLAlchemy configures the settings between model relationships *once*, and generates `JOIN` statements for us whenever we need them.
 
@@ -171,16 +171,16 @@ See the [SQLAlchemy Docs on Relationship Loading Techniques](https://docs.sqlalc
 
 `db.relationship` does not set up foreign key constraints for you. We need to add a column, `some_parent_id`, on the **child** model that has a foreign key constraint. Whereas we set `db.relationship` on the **parent** model, we set the foreign key constraint on the **child** model. A foreign key constraint prefers **referential integrity** from one table to another, by ensuring that the foreign key column always maps a primary key in the foreign table.
 
-![img-02](./imgs/img-2-7-2.png)
-![img-03](./imgs/img-2-7-3.png)
+![img-02](../imgs/img-2-7-2.png)
+![img-03](../imgs/img-2-7-3.png)
 
 ## Many-To-Many Relationships
 
 ### Types of relationships
 
-![img-04](./imgs/img-2-7-4.png)
-![img-05](./imgs/img-2-7-5.png)
-![img-06](./imgs/img-2-7-6.png)
+![img-04](../imgs/img-2-7-4.png)
+![img-05](../imgs/img-2-7-5.png)
+![img-06](../imgs/img-2-7-6.png)
 
 ### Keys in relationships; association tables
 

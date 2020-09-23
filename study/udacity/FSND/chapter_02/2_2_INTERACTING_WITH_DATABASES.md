@@ -12,12 +12,12 @@ Once we've looked at the basics of interacting with a database, we'll need to un
 
 ## 2. Relational Databases
 
-![img-01](./imgs/img-2-2-2-1.jpg)
-![img-02](./imgs/img-2-2-2-2.jpg)
-![img-03](./imgs/img-2-2-2-3.jpg)
-![img-04](./imgs/img-2-2-2-4.jpg)
-![img-05](./imgs/img-2-2-2-5.jpg)
-![img-06](./imgs/img-2-2-2-6.jpg)
+![img-01](../imgs/img-2-2-2-1.jpg)
+![img-02](../imgs/img-2-2-2-2.jpg)
+![img-03](../imgs/img-2-2-2-3.jpg)
+![img-04](../imgs/img-2-2-2-4.jpg)
+![img-05](../imgs/img-2-2-2-5.jpg)
+![img-06](../imgs/img-2-2-2-6.jpg)
 
 ### 2. Resources
 
@@ -38,14 +38,14 @@ Once we've looked at the basics of interacting with a database, we'll need to un
 
 ## 4. SQL
 
-![img-01](./imgs/img-2-2-3-1.png)
-![img-02](./imgs/img-2-2-3-2.png)
+![img-01](../imgs/img-2-2-3-1.png)
+![img-02](../imgs/img-2-2-3-2.png)
 
 - [SQL Fiddle](http://sqlfiddle.com/)
 
 ## 5. Execution Plan
 
-![img-01](./imgs/img-2-2-5-1.png)
+![img-01](../imgs/img-2-2-5-1.png)
 
 - [Explaining the unexplainable – part 2](https://www.depesz.com/2013/04/27/explaining-the-unexplainable-part-2/#seq-scan)
 
@@ -66,15 +66,15 @@ A **server** is a centralized program that communicates over a network (such as 
 
 ### Servers, Clients, Hosts
 
-![img-01](./imgs/img-2-2-6-1.png)
+![img-01](../imgs/img-2-2-6-1.png)
 
 ### Requests and Responses
 
-![img-02](./imgs/img-2-2-6-2.png)
+![img-02](../imgs/img-2-2-6-2.png)
 
 ### Relational Database Clients
 
-![img-03](./imgs/img-2-2-6-3.png)
+![img-03](../imgs/img-2-2-6-3.png)
 
 - A database client is any program that sends requests to a database
 - In some cases, the database client is a web server.
@@ -83,7 +83,7 @@ A **server** is a centralized program that communicates over a network (such as 
 
 TCP/IP is a suite of communication protocols that is used to connect devices and transfer data over the Internet.
 
-![img-01](./imgs/img-2-2-7-1.png)
+![img-01](../imgs/img-2-2-7-1.png)
 
 **TCP/IP uses**:
 
@@ -101,14 +101,14 @@ TCP/IP is connection-based, meaning all communications between parties are arran
 - Over TCP/IP, we'll always need to establish a connection between clients and servers in order to enable communications. Moreover:
 - Deliveries over the connection are error-checked: if packets arrive damaged or lost, then they are resent (known as retransmission).
 
-![img-01](./imgs/img-2-2-8-1.png)
+![img-01](../imgs/img-2-2-8-1.png)
 
 - Connecting starts a session. Ending the connection ends the session.
 - In a database session, many transactions can occur during a given session. Each transaction does work to commit changes to the database (updating, inserting, or deleting records).
 
 ## 9. Transactions
 
-![img-01](./imgs/img-2-2-9-1.png)
+![img-01](../imgs/img-2-2-9-1.png)
 
 > Transactions capture logical bundles of work.
 
