@@ -73,10 +73,10 @@ Password is terrible way to authenticate, so remove it.
 
 Why Delegate the Responsibility?
 
-![img-01](../imgs/img-4-3-1.png)
-![img-01](../imgs/img-4-3-2.png)
-![img-01](../imgs/img-4-3-3.png)
-![img-01](../imgs/img-4-3-4.png)
+![img-01](../imgs/img-4-2-6.png)
+![img-01](../imgs/img-4-2-7.png)
+![img-01](../imgs/img-4-2-8.png)
+![img-01](../imgs/img-4-2-9.png)
 
 ## JWT - JSON Web Tokens
 
@@ -84,9 +84,9 @@ Traditionally, server validated authentication using a session table. A session 
 
 ### JWT Features
 
-![img-01](../imgs/img-4-6-1.png)
-![img-02](../imgs/img-4-6-2.png)
-![img-03](../imgs/img-4-6-3.png)
+![img-01](../imgs/img-4-2-10.png)
+![img-02](../imgs/img-4-2-11.png)
+![img-03](../imgs/img-4-2-12.png)
 
 - Stateless
 - Difficult to fake
@@ -95,14 +95,14 @@ Traditionally, server validated authentication using a session table. A session 
 
 ### JWT - Data Structure
 
-![img-01](../imgs/img-4-7-1.png)
-![img-02](../imgs/img-4-7-2.png)
+![img-01](../imgs/img-4-2-13.png)
+![img-02](../imgs/img-4-2-14.png)
 
 ### JWT - Validation
 
-![img-01](../imgs/img-4-8-1.png)
-![img-02](../imgs/img-4-8-2.png)
-![img-03](../imgs/img-4-8-3.png)
+![img-01](../imgs/img-4-2-15.png)
+![img-02](../imgs/img-4-2-16.png)
+![img-03](../imgs/img-4-2-17.png)
 
 **More Read**:
 
@@ -138,8 +138,8 @@ print(decoded_base64)
 ## Local Storage
 
 
-![img-01](../imgs/img-4-11-1.png)
-![img-02](../imgs/img-4-11-2.png)
+![img-01](../imgs/img-4-2-18.png)
+![img-02](../imgs/img-4-2-19.png)
 
 [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is an implementation of a [key-value](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) store which is accessible through a javascript interface in most modern browsers. It is a general purpose interface to store strings which will persist in memory from session to session. It is designed for smaller strings and alternative opensource systems like [localForage](https://github.com/localForage/localForage) exist for large amounts of data.
 
