@@ -1,0 +1,36 @@
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+Ha HaHa
+
+MetaCharacters (Need to be escaped):
+.[{()\^$|?*+
+
+coreyms.com
+
+cat
+mat
+pat
+bat
+
+321-555-4321
+123.555.1234
+800-555-1234
+900-234-6789
+
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Robinson
+Mr. T
+
+# Examples
+\d\d\d[-.]\d\d\d[-.]\d\d\d\d
+\d{3}.\d{3}.\d{4}
+[1-7]
+[a-z]
+[^a-zA-C]
+M(r|s|rs)\.?\s[A-Z]\w*
+[a-zA-Z0-9.-]+@[a-zA-Z-]+\.(com|edu|net)
+https?://(www\.)?(\w+)(\.\w+)
