@@ -91,7 +91,7 @@ For entities, the simplest option is to say that the hash is `None` , meaning th
 
 ### Chapter 2. Repository Pattern
 
-The Repository pattern, a simplifying abstraction over data storage, allowes us to decouple our model layer from the data layer.
+The Repository pattern, a simplifying abstraction over data storage, allows us to decouple our model layer from the data layer.
 
 ![Figure 2-1](imgs/figure-2-1.png)
 
