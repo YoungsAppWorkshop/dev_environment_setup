@@ -147,14 +147,14 @@ Security groups:
 
 Application Load Balancer is the second type of load balancer introduced as part of the Elastic Load Balancing service. It offers most of the features provided by the Classic Load Balancer, and adds some important features and enhancements that lend it to unique use cases.
 
-Enhanced Features:
+**Enhanced Features**:
 
 - Supported Protocols: HTTP, HTTPS, HTTP/2, and WebSockets
 - CloudWatch Metrics: Additional load balance metrics and Target Group metric dimension
 - Access Logs: Ability to see connection details for WebSocket connections
 - Health Checks: Insight into target and application health at more granular level
 
-Additional Features:
+**Additional Features**:
 
 - Path and Host-based Routing
   - Path-based provides rules that foward requests to different target groups
@@ -166,7 +166,7 @@ Additional Features:
 - AWS WAF
 - Native IPv6 Support
 
-Use Case:
+**Use Case**:
 
 - Use as containers to host micro services and route to the applications from a single load balancer
 
@@ -177,12 +177,12 @@ Auto Scaling helps you ensure that you have the correct number of Amazon EC2 ins
 - Scalability: How can I ensure that my workload has enough EC2 resources to meet fluctuating performance requirements?
 - Automation: How can I automate EC2 resource provisioning to occur on-demand?
 
-Terminology:
+**Terminology**:
 
 - Scaling Out: Launch Instances
 - Scaling In: Terminate Instances
 
-Auto Scaling Components: Launce Configuration -> Auto Scaling Group -> Auto Scaling Policy
+**Auto Scaling Components**: Launce Configuration -> Auto Scaling Group -> Auto Scaling Policy
 
 - Launce Configuration: What?
   - AMI
