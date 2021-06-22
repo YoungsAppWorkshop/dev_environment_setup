@@ -13,7 +13,7 @@ Software objects are not typically tangible things that you can pick up, sense, 
 
 *Object-oriented means functionally directed towards modeling objects.* This is one of the many techniques used for modeling complex systems by describing a collection of interacting objects via their data and behavior.
 
-**Object-oriented analysis(OOA)** is the process of looking at a problem, system, or task (that somebody wants to turn into an application) and identifying the objects and interactions between those objects. *The analysis stage is all about **WHAT** needs to be done.* The output of the analysis stage is **a set of requirements**. For example, Website visitors need to be able to:
+**Object-oriented analysis(OOA)** is the process of looking at a problem, system, or task (that somebody wants to turn into an application) and identifying the objects and interactions between those objects. *The analysis stage is all about **WHAT** needs to be done.* The output of the analysis stage is **a set of requirements**. For example, Website visitors need to be able to
 
 - *review* our **history**
 - *apply* for **jobs**
